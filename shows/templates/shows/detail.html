@@ -1,0 +1,6 @@
+<h1>{{ concert.venue_name }}</h1>
+<ul>
+{% for song in concert.song_set.all %}
+    <li>{{ song.song_title }}</li>
+{% endfor %}
+</ul>

@@ -1,0 +1,9 @@
+{% if latest_concert_list %}
+    <ul>
+    {% for concert in latest_concert_list %}
+    <li><a href="{% url 'shows:detail' concert.id %}">{{ concert.venue_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Shows Are Available.  How UnRestaurant Of Us!</p>
+{% endif %}
