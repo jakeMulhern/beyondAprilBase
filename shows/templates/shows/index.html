@@ -1,3 +1,7 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'shows/style.css' %}">
+
 {% if latest_concert_list %}
     <ul>
     {% for concert in latest_concert_list %}
@@ -5,5 +9,5 @@
     {% endfor %}
     </ul>
 {% else %}
-    <p>No Shows Are Available.  How UnRestaurant Of Us!</p>
+    <p>No Shows Are Available.  How UnRestaurant Of Us!!!</p>
 {% endif %}
