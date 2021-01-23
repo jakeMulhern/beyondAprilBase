@@ -1,14 +1,18 @@
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
+from django.urls import reverse
+from django.views import generic
 
-from .models import Concert
+from .models import Concert, Song
 
-def index(request):
-    latest_concert_list = Concert.objects.all()[:5]
-    context = {'latest_concert_list': latest_concert_list}
-    return render(request, 'shows/index.html', context)
+class IndexView(generic.ListView):
+    template_name = 'shows/index.html'
+    context_object_name = 'latest_concert_list'
+
+    def get_queryset(self):
+        return Concert.objects.all()[:5]
 
 
-def detail(request, concert_id):
-    concert = get_object_or_404(Concert, pk=concert_id)
-    return render(request, 'shows/detail.html', {'concert': concert})
+class DetailView(generic.DetailView):
+    model = Concert
+    template_name = 'shows/detail.html'
