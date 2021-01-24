@@ -3,5 +3,9 @@ body {
 }
 
 li a {
-  color: green;
+  color: red;
+}
+
+li {
+  color: yellow;
 }
