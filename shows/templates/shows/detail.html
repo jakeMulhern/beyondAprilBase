@@ -1,6 +1,27 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'shows/style.css' %}">
+
 <h1>{{ concert.venue_name }}</h1>
 <ul>
 {% for song in concert.song_set.all %}
     <li>{{ song.song_title }}</li>
+    <li>{{ song.song_location }}</li>
+    <!-- Working -->
+    <audio 
+      class = "audioPlayer uniqueShowAP"
+      controls <--controlsList="nodownload"
+        src="{% static 'shows/audio/redRocks2019/01 Yi.mp3' %}">
+        Your browser does not support the
+        <code>audio</code> element.
+    </audio>
+    <!-- Not Working...yet -->
+    <audio 
+    class = "audioPlayer uniqueShowAP"
+    controls <--controlsList="nodownload"
+      src="{}">
+      Your browser does not support the
+      <code>audio</code> element.
+    </audio>
+
 {% endfor %}
 </ul>

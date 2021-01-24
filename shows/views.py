@@ -16,3 +16,6 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     model = Concert
     template_name = 'shows/detail.html'
+
+    def get_queryset(self):
+        return Concert.objects.all()
