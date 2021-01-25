@@ -2,9 +2,5 @@
   "python.pythonPath": "fauxClaire/bin/python",
   "python.analysis.disabled": [
     "unresolved-import"
-<<<<<<< HEAD
-]
-=======
   ]
->>>>>>> 1153dc0a7734793925521625af29531af9bdec3d
 }
