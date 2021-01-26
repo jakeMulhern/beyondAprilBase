@@ -1,11 +1,11 @@
 body {
-<<<<<<< HEAD
-  background: #666 url("images/BILivePortland.jpg")
-=======
   background: #666 url('images/BILivePortland.jpg') no-repeat;
->>>>>>> 5c83bdabea5b9ad124b0509831b648ae18e862b0
 }
 
 li a {
-  color: green;
+  color: red;
+}
+
+li {
+  color: yellow;
 }
