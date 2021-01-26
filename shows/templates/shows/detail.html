@@ -1,6 +1,16 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'shows/style.css' %}">
+
 <h1>{{ concert.venue_name }}</h1>
 <ul>
 {% for song in concert.song_set.all %}
     <li>{{ song.song_title }}</li>
+    <audio 
+        class = "audioPlayer uniqueShowAP"
+        controls <--controlsList="nodownload"
+        src="/static/shows/audio/{{ song.song_location }}">
+        Your browser does not support the
+        <code>audio</code> element.
+    </audio>
 {% endfor %}
 </ul>
