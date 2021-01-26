@@ -3,18 +3,16 @@ from django.contrib import admin
 from .models import Concert, Song
 
 
-class SongInLine(admin.StackedInline):
+class SongInline(admin.StackedInline):
     model = Song
 
 class ConcertAdmin(admin.ModelAdmin):
     fieldsets = [
-      ('Date', {'fields': ['concert_date']}), 
-      ('Venue', {'fields': ['venue_name']}),
-      ('City', {'fields': ['city_name'], 'classes':
-      ['collapse']}),
+        ('Venue',            {'fields': ['venue_name']}),
+        ('City',             {'fields': ['city_name']}),
+        ('Date',             {'fields': ['concert_date'], 'classes': ['collapse']}),
     ]
-    inlines = [SongInLine]
-
+    inlines = [SongInline]
 
 admin.site.register(Concert, ConcertAdmin)
 admin.site.register(Song)
