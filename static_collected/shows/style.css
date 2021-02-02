@@ -2,10 +2,19 @@ body {
   background: #666 url('images/BILivePortland.jpg') no-repeat;
 }
 
+ul {
+  list-style: none;
+}
+
 li a {
   color: red;
 }
 
 li {
-  color: yellow;
+  color: green;
+  list-style: none;
+}
+
+a {
+  color: green;
 }
