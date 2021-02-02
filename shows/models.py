@@ -1,4 +1,5 @@
 from django.db import models
+import boto3
 
 
 class Concert(models.Model):

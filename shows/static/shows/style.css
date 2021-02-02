@@ -8,4 +8,9 @@ li a {
 
 li {
   color: yellow;
+  list-style: none;
+}
+
+a {
+  color: green;
 }

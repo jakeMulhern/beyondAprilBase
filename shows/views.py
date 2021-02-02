@@ -5,6 +5,8 @@ from django.views import generic
 
 from .models import Concert, Song
 
+import boto3
+
 class IndexView(generic.ListView):
     template_name = 'shows/index.html'
     context_object_name = 'latest_concert_list'
