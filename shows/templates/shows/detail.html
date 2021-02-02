@@ -9,15 +9,6 @@
     <ul id="songList">
         {% for song in concert.song_set.all %}
             <li class="audioTrackName" id="{{ song.song_location }}">{{ song.song_title }}</li>
-            <!--
-            <audio 
-                class = "audioPlayer uniqueShowAP"
-                controls <--controlsList="nodownload"
-                src="{{ song.song_location }}">
-                Your browser does not support the
-                <code>audio</code> element.
-            </audio> 
-            -->
         {% endfor %}
     </ul>
     
