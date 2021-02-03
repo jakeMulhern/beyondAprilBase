@@ -54,7 +54,10 @@ ROOT_URLCONF = 'beyond_april_base.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'beyond_april_base/templates/beyond_april_base',
+            '/shows/templates/shows',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
