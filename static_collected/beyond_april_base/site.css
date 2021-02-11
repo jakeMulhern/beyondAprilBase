@@ -6,6 +6,10 @@ h1 {
   color: blue;
 }
 
+.site-title {
+  color: blue;
+}
+
 .navbar {
   background-color: lightslategray;
   font-size: 1em;

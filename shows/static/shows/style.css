@@ -16,6 +16,10 @@ a {
   color: green;
 }
 
+h1 {
+  color: yellow;
+}
+
 .detailsAudioPlayer {
   position: absolute;
   right: 50px;
