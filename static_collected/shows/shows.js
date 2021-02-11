@@ -3,6 +3,8 @@
 var App = {
 	init: function() {
 		this.bindEvents();
+		let tracklist = document.getElementsByClassName('audioTrackName').id;
+		console.log(tracklist);
 	},
 	bindEvents: function() {
 		document.getElementById('songList').addEventListener('click', function(event) {
@@ -13,7 +15,10 @@ var App = {
 			}.bind(this));
 	},
 	playAudioTrack: function(songLocation) {
+		console.log(songLocation);
+		
 		const audioPlayer = document.getElementById('audioPlayer');
+
 		if (audioPlayer.paused !== true) {
 			audioPlayer.pause();
 		} else if (songLocation === audioPlayer.src) {
