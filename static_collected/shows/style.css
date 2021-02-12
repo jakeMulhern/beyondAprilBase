@@ -26,6 +26,13 @@ h1 {
   top: 240px;
 }
 
+h3 {
+  position: absolute;
+  right: 50px;
+  top: 200px; 
+  color: yellow; 
+}
+
 
 .navbar {
   background-color: lightslategray;

@@ -9,15 +9,17 @@ var App = {
 		document.getElementById('songList').addEventListener('click', function(event) {
 			var elementClicked = event.target;
 			if (elementClicked.className === 'audioTrackName') {
-				this.playAudioTrack(elementClicked.id);
+				this.playAudioTrack(elementClicked);
 				}    
 			}.bind(this));
 		document.getElementById('audioPlayer').addEventListener('ended', this.autoPlayNextTrack.bind(this));
 	},
-	playAudioTrack: function(songLocation) {
-		console.log(songLocation);
+	playAudioTrack: function(song) {
 		
+		const songLocation = song.id;
+		const songName = song.innerHTML;
 		const audioPlayer = document.getElementById('audioPlayer');
+		const currentTrackName = document.getElementById('currentTrack');
 
 		if (audioPlayer.paused !== true) {
 			audioPlayer.pause();
@@ -26,6 +28,7 @@ var App = {
 		} else {
 			audioPlayer.src = songLocation;
 			audioPlayer.play();
+			currentTrackName.innerHTML = 'Currently Playing: ' + songName;
 		};
 	},
 	autoPlayNextTrack: function() {
