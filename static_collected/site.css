@@ -2,37 +2,9 @@ body {
   background: #666 url('images/BILivePortland.jpg') no-repeat;
 }
 
-li a {
+h1 {
   color: red;
 }
-
-li {
-  color: yellow;
-  list-style: none;
-  margin: 5px;
-}
-
-a {
-  color: green;
-}
-
-h1 {
-  color: yellow;
-}
-
-.detailsAudioPlayer {
-  position: absolute;
-  right: 50px;
-  top: 240px;
-}
-
-h3 {
-  position: absolute;
-  right: 50px;
-  top: 200px; 
-  color: yellow; 
-}
-
 
 .navbar {
   background-color: lightslategray;
