@@ -20,4 +20,7 @@ class DetailView(generic.DetailView):
     template_name = 'shows/detail.html'
 
     def get_queryset(self):
+        for f in Concert.objects.all():
+           for s in f.song_set.all():
+               print(s)
         return Concert.objects.all()

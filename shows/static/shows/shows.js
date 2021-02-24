@@ -41,7 +41,7 @@ var App = {
 				if (trackListElements[i + 1] === undefined) {
 					return;
 				} else {
-					nextTrack = trackListElements[i + 1].id;
+					nextTrack = trackListElements[i + 1];
 				}
 			}
 		}
